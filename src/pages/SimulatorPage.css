@@ -1,0 +1,317 @@
+.sim-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.sim-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sim-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.sim-subtitle {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.sim-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Sidebar Assumptions */
+.sim-sidebar {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.sim-sidebar h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #111827;
+}
+
+.sim-input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sim-ig-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sim-input-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+.sim-ig-input-wrap {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #059669;
+  width: 120px;
+  box-sizing: border-box;
+}
+
+.sim-ig-input-wrap:focus-within {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5,150,105,0.1);
+}
+
+.sim-ig-input-wrap span {
+  color: #059669;
+  margin-right: 4px;
+}
+.sim-ig-input-wrap span.suffix {
+  margin-right: 0;
+  margin-left: 4px;
+  font-size: 0.9rem;
+}
+
+.sim-ig-num {
+  border: none;
+  background: transparent;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #059669;
+  width: 100%;
+  font-family: inherit;
+  outline: none;
+}
+.sim-ig-num.text-right {
+  text-align: right;
+}
+
+/* Hide spin buttons */
+.sim-ig-num::-webkit-inner-spin-button,
+.sim-ig-num::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sim-input-group input[type="range"] {
+  width: 100%;
+  accent-color: #059669;
+  cursor: pointer;
+}
+
+.sim-custom-box input[type="number"] {
+  padding: 0.7rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+.sim-custom-box input[type="number"]:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5,150,105,0.1);
+}
+
+.sim-summary {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sim-summary label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+.sim-summary-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.sim-btn-run {
+  background: #059669; /* Exact green UI button */
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sim-btn-run:hover {
+  background: #047857;
+}
+
+/* Main Area */
+.sim-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: spFadeIn 0.4s ease;
+}
+
+.sim-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.sim-stat-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid #f1f5f9;
+}
+
+.sim-stat-box label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+.sim-stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.text-gray { color: #475569; }
+.text-purple { color: #7c3aed; }
+.text-cyan { color: #0ea5e9; } /* Cyan mapping for Gains */
+
+.sim-chart-card, .sim-table-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  border: 1px solid #f1f5f9;
+}
+
+.sim-chart-card h3, .sim-table-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #111827;
+}
+
+.sim-chart-wrapper {
+  margin-top: 1rem;
+}
+
+.sim-chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+.sim-chart-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.sim-legend-line {
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+}
+.sim-legend-line.green { background: #10b981; }
+.sim-legend-line.dashed { border-top: 2px dashed #10b981; background: transparent; }
+.sim-legend-line.purple { background: #7c3aed; }
+.sim-legend-line.solid { background: #7c3aed; }
+
+/* Tooltip */
+.sim-tooltip {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+}
+.sim-tooltip-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+.sim-tooltip-row {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.sim-tooltip-row.saved { color: #059669; }
+.sim-tooltip-row.invest { color: #7c3aed; }
+
+/* Table */
+.sim-table-wrapper {
+  overflow-x: auto;
+}
+.sim-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.sim-table th {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sim-table td {
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-bottom: 1px solid #f1f5f9;
+}
+.sim-table tr:last-child td {
+  border-bottom: none;
+}
+.sim-table tbody tr:hover td {
+  background: #f8fafc;
+}
+
+@media (max-width: 992px) {
+  .sim-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .sim-stats-row {
+    grid-template-columns: 1fr;
+  }
+}

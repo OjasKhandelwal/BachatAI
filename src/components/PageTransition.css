@@ -1,0 +1,33 @@
+.page-loader-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.page-loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #a78bfa);
+  background-size: 200% 100%;
+  animation: shimmer 1s linear infinite;
+  transition: width 0.18s ease-out;
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.8), 0 0 4px rgba(96, 165, 250, 0.6);
+  border-radius: 0 2px 2px 0;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.page-content {
+  animation: pageFadeIn 0.25s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
