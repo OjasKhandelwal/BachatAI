@@ -1,4 +1,4 @@
-Deployed version - https://bachatai.vercel.app/
+Deployed version- https://bachatai.vercel.app/
 
 # Screenshots
 
